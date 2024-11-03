@@ -1,0 +1,173 @@
+.App {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./components/images/loginimg.png");
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.box{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    /* margin-left: 150px; */
+    margin: 30px;
+    flex-wrap: wrap;
+
+}
+
+.container {
+    width: 400px;
+    background:#1d2129;
+    border: 1px solid #dddfe2;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+
+ input {
+    border-radius: 8px;
+    border: 2px solid #dddfe2;
+    outline: none;
+    color: #1d2129;
+    margin: 1rem ;
+    padding: 0.5rem 0.75rem;
+    width: 92%;
+    font-size: 1rem;
+    
+
+}
+input:hover {
+    border-radius: 8px;
+    border:rgb(37, 41, 41) 2px solid;
+    outline: none;
+    color: #1d2129;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
+    width: 98%;
+    font-size: 1rem;
+}
+
+ .button {
+    background:rgb(222, 45, 80);
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 0.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    margin:0.6rem;
+}
+.button:hover{
+    background: #252b35;
+    border:1px solid #dddfe2;
+}
+.btn{
+    border-radius: 2px;
+    background-color:rgb(222, 45, 80) ;
+    color:aliceblue;
+    cursor: pointer;
+    float: right;
+    margin: 1.5rem;
+}
+
+.btn:hover{
+    border-radius: 2px;
+    background-color: #252b35;
+    color:aliceblue;
+    border:1px solid aliceblue;
+}
+.head
+{
+    display:flex;
+    background-color: #252b35;
+    color:honeydew;
+    height:80px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.uploadinp{
+    color:rgb(162, 180, 174);
+    background-color: rgb(29, 28, 27);
+}
+.uploadinp:hover{
+  color:rgb(162, 180, 174);
+  background-color: rgb(29, 28, 27);
+  border: 1px solid ;
+}
+#text
+{
+    color:darkgrey;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-size:40px;
+    text-align: center;
+}
+  .homepage{
+   color:rgb(124, 128, 132);
+  }
+  .link{
+    color:rgb(191, 199, 204);
+    text-decoration: underline;
+    cursor: pointer;
+   }
+   .nav{
+    margin-left: 40px;
+    margin-top: 22px;
+    font-size: large;
+    color: #dddfe2;
+    /* text-decoration: none; */
+   }
+   .full{
+    overflow-y: scroll;
+   }
+  .det{
+    border-radius: 4px;
+    background-color:rgb(222, 45, 80) ;
+    color:aliceblue;
+    margin: 1.2rem;
+    border: none;
+    width: 40%;
+    height: 50%;
+    
+  }
+  .image {
+    
+    /* display:flex; */
+    /*flex-direction: row;8
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 9px; */
+    width: 60%;
+    height: 40%;
+
+  } 
+ 
+  .xy{
+    margin-top: 30px;
+  }
+
+  .result{
+    text-align: center;
+    background-color: navajowhite;
+    /* opacity: 0; */
+  }
+

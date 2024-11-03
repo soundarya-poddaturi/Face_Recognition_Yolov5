@@ -1,0 +1,31 @@
+# Node.js (backend)
+backend/node_modules/
+backend/.env
+backend/package-lock.json
+backend/npm-debug.log
+
+# Python (flask)
+flask/__pycache__/
+flask/venv/
+flask/.env
+flask/.pytest_cache/
+flask/*.pyc
+flask/.DS_Store
+
+# React (frontend)
+frontend/node_modules/
+frontend/.env
+frontend/build/
+frontend/.DS_Store
+frontend/.eslintcache
+frontend/package-lock.json
+frontend/npm-debug.log
+
+
+# General
+.DS_Store
+*.log
+*.env
+.vscode/
+.idea/
+*.iml
