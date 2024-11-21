@@ -1,12 +1,31 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import express from "express";
+import bodyParser from "body-parser";
+import cors from "cors";  // Import cors
 
+// Load environment variables
 dotenv.config();
+
+// Initialize Express app
+const app = express();
+
+// Enable CORS
+app.use(cors());  // This allows all origins; you can restrict it to specific domains later
+
+// Use body parser to parse JSON requests
+app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+})
+.then(() => {
+    console.log("Database connected successfully");
+})
+.catch((err) => {
+    console.error("Database connection error:", err);
 });
 
 // Define User model
@@ -21,7 +40,8 @@ const ImgInfo = mongoose.model("imginfo", new mongoose.Schema({
     name: String,
 }));
 
-export default async function handler(req, res) {
+// Define handler function
+const handler = async (req, res) => {
     switch (req.method) {
         case 'POST':
             // Handle login
@@ -91,4 +111,12 @@ export default async function handler(req, res) {
             res.setHeader('Allow', ['POST']);
             return res.status(405).end(`Method ${req.method} Not Allowed`);
     }
-}
+};
+
+// Set up routes
+app.all('*', handler);
+
+// Start the server on port 9002
+app.listen(9002, () => {
+    console.log("Server is running on port 9002");
+});

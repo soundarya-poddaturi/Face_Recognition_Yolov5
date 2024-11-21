@@ -28,7 +28,7 @@ const Register = () => {
     const register = () => {
         const { name, email, password, reEnterPassword } = user
         if( name && email && password && (password === reEnterPassword)){
-            axios.post("http://localhost:9002/register", user) //sending to backend
+            axios.post(`${process.env.REACT_APP_API_URL}/register`, user) //sending to backend
             .then( res => {
                 if(res.data.message==="Successfully Registered, Please login now.")
                 {

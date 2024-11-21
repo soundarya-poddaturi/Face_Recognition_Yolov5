@@ -22,7 +22,7 @@ const Login = ({ setLoginUser}) => {
     }
 
     const login = () => {
-        axios.post("http://localhost:9002/login", user)
+        axios.post(`${process.env.REACT_APP_API_URL}/login`, user)
         .then(res => {
             if(res.data.message === "Login Successfully")
             {

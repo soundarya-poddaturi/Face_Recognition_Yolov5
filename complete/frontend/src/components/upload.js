@@ -35,7 +35,7 @@ const Upload = () => {
         //headers: { 'Content-Type': 'multipart/form-data' }, // DO NOT INCLUDE HEADERS
         body: formData2
     };
-      fetch('http://localhost:8000/object-to-img', requestOptions)
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/object-to-img`, requestOptions)
         .then(response =>  response.json())
         .then(function (response) {
           console.log('response')
