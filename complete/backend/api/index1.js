@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import cors from "cors";  // Import CORS
 
 dotenv.config();
 
@@ -22,24 +21,7 @@ const ImgInfo = mongoose.model("imginfo", new mongoose.Schema({
     name: String,
 }));
 
-// Use CORS middleware
-const corsOptions = {
-    origin: '*', // You can replace '*' with a specific domain if needed, e.g., 'https://yourfrontend.com'
-    methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-};
-
 export default async function handler(req, res) {
-    // Apply CORS for each request
-    res.setHeader('Access-Control-Allow-Origin', '*');  // Allow CORS for all origins
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');  // Allowed methods
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');  // Allowed headers
-
-    // If the method is OPTIONS (preflight), return a success status
-    if (req.method === 'OPTIONS') {
-        return res.status(200).end();
-    }
-
     switch (req.method) {
         case 'POST':
             // Handle login
